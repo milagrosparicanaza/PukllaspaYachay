@@ -1,0 +1,18 @@
+/* mainContent.css */
+.main-content {
+    background-color: #2c3e50; /* Color oscuro similar al mostrado en la imagen */
+    color: #ffffff; /* Texto en blanco */
+    padding: 20px;
+    height: 100vh;
+    flex: 1; /* Esto hace que ocupe todo el espacio restante en el modo horizontal */
+    overflow: auto; /* Agrega scroll si el contenido es más largo que la pantalla */
+    box-sizing: border-box;
+  }
+
+  @media (max-aspect-ratio: 1/1) {
+    .main-content{
+      flex: 1;
+      width: 100%; /* Asegura que el contenido ocupe todo el ancho */
+      overflow: auto;
+    }
+  }

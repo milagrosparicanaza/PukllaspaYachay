@@ -1,0 +1,65 @@
+/* Estilos generales para la interfaz */
+.question-container {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.question-title {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 1rem;
+  color: #e74c3c;
+  margin: 10px 0;
+}
+
+.answer-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.answer-button {
+  background-color: #4CAF50; /* Botón verde */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.answer-button:hover {
+  background-color: #45a049;
+}
+
+.answer-button:active {
+  background-color: #388e3c;
+}
+
+.answer-button:focus {
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .question-container {
+    padding: 10px;
+  }
+  .answer-button {
+    font-size: 1rem;
+  }
+}

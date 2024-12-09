@@ -1,0 +1,90 @@
+/* Estilos para la barra lateral */
+.sidebar {
+    width: 190px; /* Ancho fijo de la barra lateral en modo vertical */
+    height: 100vh; /* La barra lateral ocupa toda la altura de la ventana */
+    background-color: #1e2a3a; /* Color de fondo oscuro */
+    color: white; /* Color de texto blanco */
+    display: flex; /* Flexbox para alinear elementos en la barra */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    padding: 5px; /* Espaciado interno de 20px alrededor */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho y alto */
+    border-right: 2px solid white; /* Línea separadora blanca */
+  }
+  
+  .sidebar-header {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px; /* Espacio inferior para separar los ítems */
+  }
+  
+  .sidebar-icon {
+    font-size: 24px; /* Ajusta el tamaño de los iconos a 24px */
+    margin-right: 10px; /* Espacio de 10px entre el icono y el texto */
+  }
+  
+  /* Estilo del texto */
+  .sidebar-text {
+    font-size: 18px; /* Tamaño de texto ajustable a 18px */
+    font-weight: bolder; /* Texto en negrita */
+    display: inline-block; /* Se muestra como un elemento en línea */
+  }
+  
+  /* Estilos para cada elemento del menú */
+  .menu-item {
+    padding: 15px; /* Espaciado interno de 15px en cada elemento */
+    margin: 5px 0; /* Separación de 10px en la parte superior e inferior */
+    cursor: pointer; /* Cambia el cursor a pointer para indicar que es clickeable */
+    color: #ffffff; /* Color del texto en blanco */
+    font-size: 16px; /* Tamaño de texto a 16px */
+    display: flex; /* Flexbox para organizar icono y texto en una fila */
+    align-items: center; /* Centra verticalmente los elementos del menú */
+    border-radius: 8px; /* Bordes redondeados de 8px */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave de 0.3s en el color y fondo */
+    text-decoration: none;
+  }
+  
+  /* Estilo para el icono dentro del menú */
+  .menu-item span {
+    margin-right: 10px; /* Espacio de 10px entre el icono y el texto */
+  }
+  
+  /* Cambio de color al pasar el cursor */
+  .menu-item:hover {
+    background-color: #2c3e50; /* Fondo más claro al hacer hover */
+  }
+  
+  /* Estilo para el elemento activo o seleccionado */
+  .menu-item.active {
+    color: #00b4ff; /* Color azul para el texto del elemento activo */
+    background-color: #2c3e50; /* Fondo para el elemento activo */
+    border: 2px solid #00b4ff; /* Borde azul para resaltar el elemento activo */
+  }
+  
+  /* Cambia el sidebar a horizontal cuando el alto es mayor o igual al ancho */
+  @media (max-aspect-ratio: 1/1) {
+    /* Estilo del sidebar en modo horizontal en la parte inferior */
+    .sidebar {
+      width: 100%; /* El sidebar ocupa todo el ancho de la pantalla */
+      height: 80px; /* Altura fija del sidebar en modo horizontal */
+      position: absolute; /* Coloca el sidebar en una posición absoluta */
+      bottom: 0; /* Posiciona el sidebar en la parte inferior */
+      display: flex; /* Flexbox para organizar los elementos en fila */
+      flex-direction: row; /* Organiza los elementos en una fila */
+      justify-content: space-around; /* Espacia los elementos de manera uniforme */
+      align-items: center; /* Alinea los elementos verticalmente al centro */
+      background-color: #1f2937; /* Fondo oscuro para el sidebar en modo horizontal */
+      border-top: 2px solid #ffffff;
+      border-right: none; /* Quita la línea separadora en modo vertical */
+    }
+    .sidebar-text {
+      display: none; /* Oculta el texto en el sidebar cuando está en modo horizontal */
+    }
+    .menu-item {
+      padding: 2px; /* Espaciado interno de 15px en cada elemento */
+      margin: 5px 0; /* Separación de 10px en la parte superior e inferior */
+    }
+    .sidebar-header {
+      display: none;
+    }
+  }
+  
