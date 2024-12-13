@@ -2,7 +2,7 @@
 import React from 'react';
 
 function ComponenteClase({ clase, onClick, manejarIdClaseActual}) {
-  const {nombre_clase, progreso, id_clase } = clase;
+  const {nombre_clase, progreso, id_clase, boton_color } = clase;
 
   return (
     <div
@@ -12,7 +12,7 @@ function ComponenteClase({ clase, onClick, manejarIdClaseActual}) {
       }}
    
       style={{
-        backgroundColor: '#FFA851',
+        backgroundColor: boton_color,
         borderRadius: '10px',
         padding: '1rem',
         textAlign: 'center',

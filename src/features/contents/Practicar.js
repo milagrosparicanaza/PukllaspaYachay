@@ -74,8 +74,24 @@ const InterfazPracticarGlosarioClase = ({cambiarInterface, id_claseActual, id_us
           <ComponenteGlosarioPracticar glosario={glosario} />
         </div>
       )}
-
-      <button onClick={() => cambiarInterface('A')}>Atrás</button>
+      <button 
+        onClick={() => cambiarInterface('A')} 
+        style={{
+          backgroundColor: '#007BFF',  // Azul
+          color: '#fff',               // Texto blanco
+          border: 'none',              // Sin borde
+          borderRadius: '5px',         // Bordes redondeados
+          padding: '10px 20px',        // Espaciado interno
+          fontSize: '16px',            // Tamaño de fuente
+          cursor: 'pointer',          // Cursor de mano al pasar por encima
+          transition: 'background-color 0.3s',  // Efecto suave en el cambio de color
+          marginRight: '10px',         // Separación entre los botones
+        }}
+        onMouseEnter={(e) => e.target.style.backgroundColor = '#0056b3'} // Cambio de color al pasar el mouse
+        onMouseLeave={(e) => e.target.style.backgroundColor = '#007BFF'}  // Vuelve al color original
+      >
+        Atras
+      </button>
     </div> 
   );
 };

@@ -4,6 +4,7 @@ import { clasesDeUsuario } from '../../components/usuario/Usuario';
 import ComponenteClase from '../../components/ComponenteClase';
 import { obtenerClasePorId, obtenerGlosarioClase } from '../../components/clase/Clase';
 import { Markdown } from '../../features/formateo/Markdown'; // Importamos la función Markdown
+import { useNavigate } from 'react-router-dom'; // Asegúrate de importar Link desde react-router-dom
 
 const InterfazMostrarClases = ({ cambiarInterface, userId, manejarIdClaseActual }) => {
   const [clases, setClases] = useState([]); 
@@ -51,6 +52,7 @@ const InterfazMostrarContenidoClase = ({ cambiarInterface, id_claseActual }) => 
   const [clase, setClase] = useState(null);
   const [glosario, setGlosario] = useState([]);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (id_claseActual) {
@@ -100,9 +102,43 @@ const InterfazMostrarContenidoClase = ({ cambiarInterface, id_claseActual }) => 
           </ul>
         </div>
       )}
+      <button 
+        onClick={() => cambiarInterface('A')} 
+        style={{
+          backgroundColor: '#007BFF',  // Azul
+          color: '#fff',               // Texto blanco
+          border: 'none',              // Sin borde
+          borderRadius: '5px',         // Bordes redondeados
+          padding: '10px 20px',        // Espaciado interno
+          fontSize: '16px',            // Tamaño de fuente
+          cursor: 'pointer',          // Cursor de mano al pasar por encima
+          transition: 'background-color 0.3s',  // Efecto suave en el cambio de color
+          marginRight: '10px',         // Separación entre los botones
+        }}
+        onMouseEnter={(e) => e.target.style.backgroundColor = '#0056b3'} // Cambio de color al pasar el mouse
+        onMouseLeave={(e) => e.target.style.backgroundColor = '#007BFF'}  // Vuelve al color original
+      >
+        Atras
+      </button>
 
-      <button onClick={() => cambiarInterface('A')}>Atras</button>
-      <button onClick={() => cambiarInterface('C')}>Practicar</button>
+      <button 
+        onClick={() => navigate('/practicar')}
+        style={{
+          backgroundColor: '#007BFF',  // Azul
+          color: '#fff',               // Texto blanco
+          border: 'none',              // Sin borde
+          borderRadius: '5px',         // Bordes redondeados
+          padding: '10px 20px',        // Espaciado interno
+          fontSize: '16px',            // Tamaño de fuente
+          cursor: 'pointer',          // Cursor de mano al pasar por encima
+          transition: 'background-color 0.3s',  // Efecto suave en el cambio de color
+        }}
+        onMouseEnter={(e) => e.target.style.backgroundColor = '#0056b3'} // Cambio de color al pasar el mouse
+        onMouseLeave={(e) => e.target.style.backgroundColor = '#007BFF'}  // Vuelve al color original
+      >
+        Practicar
+      </button>
+
     </div>
   );
 };

@@ -1,19 +1,11 @@
-// src/components/ComponenteClase.js
-
 import React from 'react';
-import API_BASE_URL from '../config/Config';
+import API_BASE_URL from '../../config/Config';
 
-function ComponenteClase({ clase, onClick, manejarIdClaseActual }) {
-  const { nombre_clase, id_clase, img_clase, boton_color } = clase;
-
+function ComponenteClase({ nombre_juego, img_juego, boton_color }) {
   return (
     <div
-      onClick={() => {
-        manejarIdClaseActual(id_clase);  // Llamamos a la función para actualizar el estado en el componente padre
-        onClick();  // También llamamos a onClick para cambiar la interfaz
-      }}
       style={{
-        backgroundColor: boton_color,  // Corregido: eliminamos las comillas alrededor de color_clase
+        backgroundColor: boton_color || '#007BFF',  // Asegúrate de que boton_color esté definido
         borderRadius: '10px',
         padding: '1rem',
         textAlign: 'center',
@@ -23,13 +15,13 @@ function ComponenteClase({ clase, onClick, manejarIdClaseActual }) {
         margin: 'auto',
       }}
     >
-      <h2 style={{ fontSize: '1.5rem', margin: 0 }}>{nombre_clase}</h2>
+      <h2 style={{ fontSize: '1.5rem', margin: 0 }}>{nombre_juego}</h2>
       
       {/* Agregar la imagen aquí */}
-      {img_clase && (
+      {img_juego && (
         <img
-          src={`${API_BASE_URL}/${img_clase}`}
-          alt={nombre_clase} 
+          src={`${API_BASE_URL}/${img_juego}`}
+          alt={nombre_juego} 
           style={{
             width: '200px',   // Ancho fijo de 200px
             height: '200px',  // Alto fijo de 200px
@@ -44,3 +36,4 @@ function ComponenteClase({ clase, onClick, manejarIdClaseActual }) {
 }
 
 export default ComponenteClase;
+
