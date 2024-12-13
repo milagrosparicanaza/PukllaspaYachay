@@ -1,9 +1,11 @@
 import React from 'react';
-import API_BASE_URL from '../../config/Config';
 
-function ComponenteClase({ nombre_juego, img_juego, boton_color }) {
+function ComponenteJuegos({ nombre_juego, img_juego, boton_color, onClick }) {
   return (
     <div
+    onClick={() =>{
+      onClick();
+    }}
       style={{
         backgroundColor: boton_color || '#007BFF',  // Asegúrate de que boton_color esté definido
         borderRadius: '10px',
@@ -20,7 +22,7 @@ function ComponenteClase({ nombre_juego, img_juego, boton_color }) {
       {/* Agregar la imagen aquí */}
       {img_juego && (
         <img
-          src={`${API_BASE_URL}/${img_juego}`}
+          src={img_juego}
           alt={nombre_juego} 
           style={{
             width: '200px',   // Ancho fijo de 200px
@@ -35,5 +37,5 @@ function ComponenteClase({ nombre_juego, img_juego, boton_color }) {
   );
 }
 
-export default ComponenteClase;
+export default ComponenteJuegos;
 

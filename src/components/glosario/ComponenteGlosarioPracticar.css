@@ -63,3 +63,11 @@
     font-size: 1rem;
   }
 }
+
+.glosario-image {
+  width: 200px;  /* Ancho de la imagen */
+  height: auto;  /* Ajuste automático de la altura */
+  margin-top: 20px;  /* Margen superior */
+  border-radius: 10px;  /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra para la imagen */
+}

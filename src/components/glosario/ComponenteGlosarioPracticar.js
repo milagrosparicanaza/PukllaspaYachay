@@ -8,6 +8,7 @@ function shuffleArray(array) {
 }
 
 function ComponenteGlosarioPracticar({ glosario }) {
+  //glosario tiene un valor llamado img_glosario, quiero que tambien se muestre
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); // Para llevar el seguimiento de las preguntas
   const [message, setMessage] = useState(""); // Para mostrar el mensaje de felicitaciones
   const [answers, setAnswers] = useState([]); // Para almacenar las opciones de respuesta
@@ -59,8 +60,8 @@ function ComponenteGlosarioPracticar({ glosario }) {
     <div className="question-container">
       <h2 className="question-title">Pregunta: ¿Cómo se dice "{currentQuestion.palabra_espanol}" en Quechua?</h2>
       <div className="message">{message && <p>{message}</p>}</div> {/* Mostrar el mensaje de felicitaciones o error */}
-      
-      <div className="answer-buttons">
+{/* Mostrar la imagen del glosario con la URL base añadida */} {currentQuestion.img_glosario ? ( <img src={`http://localhost:3001${currentQuestion.img_glosario}`} alt="Imagen del glosario" className="glosario-image" /> ) : ( <p>No hay imagen disponible</p> )}
+       <div className="answer-buttons">
         {/* Mostrar las opciones de respuesta como botones */}
         {answers.map((item, index) => (
           <button 
