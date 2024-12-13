@@ -74,12 +74,7 @@ const InterfazMostrarContenidoJuego = ({ cambiarInterface, id_claseActual }) => 
    if (id_claseActual === 2) {
     content = (
       <div>
-        <iframe 
-        frameborder="0" 
-        src="https://itch.io/embed/3177835" 
-        width="552" 
-        height="167">
-        <a href="https://abduzcan17.itch.io/yachay">Yachay by abduzcan17</a></iframe>
+       <iframe frameborder="0" src="https://itch.io/embed-upload/12247223?color=333333" allowfullscreen="" width="980" height="640"><a href="https://abduzcan17.itch.io/yachay">Play Yachay on itch.io</a></iframe>
       </div>
     );
   }
