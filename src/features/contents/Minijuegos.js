@@ -26,22 +26,26 @@ const InterfazMostrarJuegos = ({cambiarInterface, manejarIdClaseActual}) =>{
         }}
         boton_color="#dc3545" 
         ></Juegos>
-{/*
+
         <Juegos
         nombre_juego="Formando palabras" 
-        img_juego_url="https://cdn.shopify.com/s/files/1/1075/5414/files/nene_large.jpg?v=1501151084" 
-        onClick={() => cambiarInterface('B')} 
-        manejarIdClaseActual = {manejarIdClaseActual(3)}
+        img_juego="https://cdn.shopify.com/s/files/1/1075/5414/files/nene_large.jpg?v=1501151084" 
+        onClick={() => {
+          cambiarInterface('B');
+          manejarIdClaseActual(3); // Aquí la función se ejecuta al hacer clic
+        }}
         boton_color="#ffc107"
         ></Juegos>
 
         <Juegos
         nombre_juego="Juego 4" 
-        img_juego_url="https://i.pinimg.com/originals/14/4c/85/144c85e8e30f443886faf4c6ae7e4a8f.png" 
-        onClick={() => cambiarInterface('B')} 
-        manejarIdClaseActual = {manejarIdClaseActual(4)}
+        img_juego="https://i.pinimg.com/originals/14/4c/85/144c85e8e30f443886faf4c6ae7e4a8f.png" 
+        onClick={() => {
+          cambiarInterface('B');
+          manejarIdClaseActual(4); // Aquí la función se ejecuta al hacer clic
+        }}
         boton_color="#007BFF"
-        ></Juegos>*/}
+        ></Juegos>
       </div>
     </div>
   );
