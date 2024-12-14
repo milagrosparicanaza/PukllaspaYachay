@@ -74,8 +74,8 @@ exports.getClases = (req, res) => {
   // Consulta SQL para obtener las clases y el progreso del usuario
   const sql = `
     SELECT c.id_clase, c.img_clase, c.boton_color, c.nombre_clase, ce.progreso
-    FROM Clase_estudiante ce
-    JOIN Clase c ON ce.id_clase = c.id_clase
+    FROM clase_estudiante ce
+    JOIN clase c ON ce.id_clase = c.id_clase
     WHERE ce.id_usuario = ?;
   `;
 

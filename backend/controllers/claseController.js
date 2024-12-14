@@ -10,7 +10,7 @@ exports.getClaseById = (req, res) => {
   
     const sql = `
       SELECT * 
-      FROM Clase 
+      FROM clase 
       WHERE id_clase = ?;
     `;
   
@@ -35,8 +35,8 @@ exports.getAllGlosario = (req, res) => {
 
   const sql = `
     SELECT g.*
-    FROM Glosario g
-    JOIN Clase_Glosario cg ON g.id_glosario = cg.id_glosario
+    FROM glosario g
+    JOIN clase_glosario cg ON g.id_glosario = cg.id_glosario
     WHERE cg.id_clase = ?;
   `;
 

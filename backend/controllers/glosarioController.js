@@ -78,11 +78,11 @@ exports.getGlosariosByUserAndClass = (req, res) => {
     g.img_glosario,
     p.progreso_puntaje
   FROM 
-    Glosario g
+    glosario g
   JOIN 
-    Clase_Glosario cg ON g.id_glosario = cg.id_glosario
+    clase_glosario cg ON g.id_glosario = cg.id_glosario
   JOIN 
-    Progreso p ON g.id_glosario = p.id_glosario
+    progreso p ON g.id_glosario = p.id_glosario
   WHERE 
     p.id_usuario = ?   
     AND cg.id_clase = ?;  
