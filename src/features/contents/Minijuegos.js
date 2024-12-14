@@ -79,12 +79,14 @@ const InterfazMostrarContenidoJuego = ({ cambiarInterface, id_claseActual }) => 
     );
   }
 
-/**
     if(id_claseActual === 3){
-      
-      url="https://url3.com" 
+      content = (
+        <div>
+        <iframe frameborder="0" src="https://itch.io/embed-upload/12251348?color=333333" allowfullscreen="" width="960" height="640"><a href="https://elvis51223920.itch.io/buscanumeros">Play buscaNumeros on itch.io</a></iframe>
+        </div>
+      );
     }
-
+/*
     if(id_claseActual === 4){
       url="https://url4.com" 
     }
